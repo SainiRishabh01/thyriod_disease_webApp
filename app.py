@@ -2,7 +2,7 @@ import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
 
-model = pickle.load(open('model.pkl','rb'))
+model = pickle.load(open('scalers.pkl','rb'))
 
 st.title("Thyroid Disease Prediction using ML")
 
