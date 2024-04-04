@@ -92,12 +92,15 @@ with col3:
 with col1:
     PPE6 = st.text_input('TBG')
 
+with col2:
+    PPE7 = st.text_input('referral_source(SVI or other)')
+
 # code for Prediction
 diagnosis = ''
 
 # creating a button for Prediction
 if st.button("Thyroid's Test Result"):
-    prediction = model.predict([[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ,DDP,Shimmer,Shimmer_dB,APQ3,APQ5,APQ,DDA,NHR,HNR,RPDE,DFA,spread1,spread2,D2,PPE,PPE1,PPE2,PPE3,PPE4,PPE5,PPE6]])
+    prediction = model.predict([[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ,DDP,Shimmer,Shimmer_dB,APQ3,APQ5,APQ,DDA,NHR,HNR,RPDE,DFA,spread1,spread2,D2,PPE,PPE1,PPE2,PPE3,PPE4,PPE5,PPE6,PPE7]])
 
     if (prediction[0] == 1):
         diagnosis = "The person has Parkinson's disease"
