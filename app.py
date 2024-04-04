@@ -3,7 +3,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 
 model = pickle.load(open('model.pkl','rb'))
-st.title("Thyroid Disease Prediction using ML")
+    st.title("Thyroid Disease Prediction using ML")
 
     col1, col2, col3, col4, col5 = st.columns(5)
 
