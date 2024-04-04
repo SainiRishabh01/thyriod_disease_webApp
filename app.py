@@ -8,7 +8,7 @@ model = pickle.load(open('model.pkl','rb'))
 
 st.title("Thyroid Disease Prediction using ML")
 
-col1, col2, col3, col4, col5 = st.columns(5)
+    col1, col2, col3, col4, col5 = st.columns(5)
 
     with col1:
         fo = st.text_input('Age')
